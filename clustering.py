@@ -6,7 +6,8 @@ from better_profanity import profanity
 import nltk
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
-df = pd.read_csv('tokens.csv')
+SUBREDDIT_NAME = "Berkeley"
+df = pd.read_csv('./data/{}_tokens.csv'.format(SUBREDDIT_NAME))
 
 # Set of words
 tokenized_words = list(df['tokens'])
@@ -37,19 +38,28 @@ print(df)
 print("seperate")
 print(df['sentiment']) 
 
-#size = df['sentiment'].size()
-#avg_sent = df['sentiment'].sum()/size
 
-d = {}
+# Export clusters to JSON
+d = {
+    SUBREDDIT_NAME: []
+}
 
-# Print each cluster
 for i in set(cluster_labels.tolist()):
+    c = {
+        "samples": [],
+        "sentiment": 0
+    }
+
     rows = df[df['label'] == i]
     overall_sentiment = sum(rows['sentiment']) / len(rows)
-    nrows = len(rows)
-    reps = pd.DataFrame(rows.sample(10))
+    c["sentiment"] = overall_sentiment
+
+    reps = pd.DataFrame(rows.sample(3))
     reps = reps['tokens'].apply(profanity.censor)
-    d[i] = reps
-    d.insert(3, "Sentiment", overall_sentiment, True)
-print(d)
-json = d.to_json()
+    c["samples"] = list(reps)
+
+    d[SUBREDDIT_NAME].append(c)
+
+import json
+with open('./data/{}_data.json'.format(SUBREDDIT_NAME), 'w') as f:
+    json.dump(d, f)

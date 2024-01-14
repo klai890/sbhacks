@@ -1,0 +1,97 @@
+{
+    "UCSD": [
+        {
+            "samples": [
+                "thee much issue",
+                "much time reddit",
+                "much respect guy"
+            ],
+            "sentiment": 0.2918454935622318
+        },
+        {
+            "samples": [
+                "graduated ucsd finished masters",
+                "ucsd sdsu huge protest underpaid service worker",
+                "ucsd drop admin building"
+            ],
+            "sentiment": 0.20918367346938777
+        },
+        {
+            "samples": [
+                "first hand experience exact sort hard deadlines",
+                "way angry existence deadlines",
+                "missed deadlines"
+            ],
+            "sentiment": 0.46938775510204084
+        },
+        {
+            "samples": [
+                "terrible horrible people",
+                "wide range people",
+                "game people"
+            ],
+            "sentiment": 0.21753246753246752
+        },
+        {
+            "samples": [
+                "many conversations",
+                "health many vegans animals"
+            ],
+            "sentiment": 0.12385321100917432
+        },
+        {
+            "samples": [
+                "even postgrad programs"
+            ],
+            "sentiment": 0.2594142259414226
+        },
+        {
+            "samples": [
+                "clearer picture state disinvested university california",
+                "university factor",
+                "university living microcosm central planning"
+            ],
+            "sentiment": 0.18407960199004975
+        },
+        {
+            "samples": [
+                "pretty good motivation",
+                "pretty much edge also good physics",
+                "pretty consistent dining hall options"
+            ],
+            "sentiment": 1.0
+        },
+        {
+            "samples": [
+                "thanks patience",
+                "thanks",
+                "thanks great taking golsefidy next quarter"
+            ],
+            "sentiment": 1.0
+        },
+        {
+            "samples": [
+                "unauthorized material professor leigh",
+                "professor funny asf",
+                "professor"
+            ],
+            "sentiment": 0.2702702702702703
+        },
+        {
+            "samples": [
+                "legitimate pedagogical purpose chemistry class",
+                "tempting skip class watch",
+                "div econ class whole quarter lecture"
+            ],
+            "sentiment": 0.2226027397260274
+        },
+        {
+            "samples": [
+                "best way educate",
+                "much way ucsd anything",
+                "way back apartment"
+            ],
+            "sentiment": 0.31413612565445026
+        }
+    ]
+}

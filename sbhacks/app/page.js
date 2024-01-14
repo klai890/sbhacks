@@ -1,16 +1,37 @@
 import Image from 'next/image'
-import data from '../../data.json'
+import ucsbdata from '../../data/ucsb_data.json'
+import ucsddata from '../../data/UCSD_data.json'
+import ucbdata from '../../data/Berkeley_data.json'
 
 export default function Home() {
+
+  var determineColor = (sent) => {
+    var color;
+    if (sent < 0.25){
+      color = "#b50c04"
+    }
+    else if (sent < 0.5) {
+      color = "#a85c58"
+    }
+    else if (sent < 0.75) {
+      color = "#4a825a"
+    }
+    else{
+      color = "#018025"
+    }
+    return color;
+  }
 
   return (
     <main>
       <h1>What's X College Like?</h1>
-       <h3>Courtesy of College Subreddits</h3>
-
+       <p>Sentiment Analysis of College Subreddits</p>  
+       <p>For curious college-bound students!</p>  
+       <p>The greener the better, the more red, the worse.</p>  
+       <p>Each box represents a topic, and the color represents the sentiment</p>
       <br />
 
-      <h1>Pick your college...</h1>
+      <h1>View a college...</h1>
 
       
       <div class='wrapper'>
@@ -25,18 +46,18 @@ export default function Home() {
           <h2 id="c0">UCSB</h2>
 
           <div class="college">
-              <img src="https://cdn.siter.io/assets/ast_F3BK6dFJNq9D9GRLHGMuspuuU/259bd2ac-4061-461f-b13f-7fdb02cae652.webp" alt="" class='logo'/>
 
-              {data['ucsb'].map(({samples, sentiment, n}) => (
-                <div>
-                  <div class="cluster">
-                    {samples.map((s) => (<p>{s}</p>))}
+              <img src="https://cdn.siter.io/assets/ast_F3BK6dFJNq9D9GRLHGMuspuuU/259bd2ac-4061-461f-b13f-7fdb02cae652.webp" alt="" class='logo'/>
+              <div class = "clusters">
+                {ucsbdata['ucsb'].map(({samples, sentiment}) => (
+                  <div>
+                    <div class="cluster" style={{background: determineColor(sentiment)}}>
+                      {samples.map((s) => (<p>{s}</p>))}
+                    </div>
                   </div>
-                  <p>{sentiment}</p>
-                  <p>{n}</p>
-                </div>
-              ))
-              } 
+                ))
+                } 
+              </div>
 
           </div>
 
@@ -44,29 +65,34 @@ export default function Home() {
 
            <div class="college">
               <img src="https://cdn.siter.io/assets/ast_vRJtruF1Tyez4cdN7m1NoGTUo/5f0a683c-d17e-4f0b-80c5-eb356a44e7d6.webp" alt="" class='logo'/>
+              
+              <div class = "clusters">
+                {ucsddata['UCSD'].map(({samples, sentiment}) => (
+                  <div>
+                    <div class="cluster" style={{background: determineColor(sentiment)}}>
+                      {samples.map((s) => (<p>{s}</p>))}
+                    </div>
+                  </div>
+                ))
+                } 
 
-              {data['ucsd'].map(({samples, sentiment, n}) => (
-                <div>
-                  <p>Samples: {samples.map((s) => (<h1>{s}</h1>))}</p>
-                  <p>{sentiment}</p>
-                  <p>{n}</p>
-                </div>
-              ))
-              }  
+
+          </div>
 
           </div>
           <h2 id="c2">UC Berkeley</h2>
            <div class="college">
               <img src="https://cdn.siter.io/assets/ast_QJXaA9EkGFjZgzy9NN4sydwB6/aa3c2b99-b49d-4bd0-a76c-cd18f326d57b.webp" alt="" class='logo'/>
-
-              {data['ucb'].map(({samples, sentiment, n}) => (
-                <div>
-                  <p>Samples: {samples.map((s) => (<h1>{s}</h1>))}</p>
-                  <p>{sentiment}</p>
-                  <p>{n}</p>
+                <div class="clusters lastcluster">
+                  {ucbdata['Berkeley'].map(({samples, sentiment}) => (
+                    <div>
+                        <div class="cluster" style={{background: determineColor(sentiment)}}>
+                          {samples.map((s) => (<p>{s}</p>))}
+                        </div>
+                    </div>
+                  ))
+                  }  
                 </div>
-              ))
-              }  
 
           </div>
       </div>

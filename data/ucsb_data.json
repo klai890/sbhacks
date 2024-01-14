@@ -1,0 +1,98 @@
+{
+    "ucsb": [
+        {
+            "samples": [
+                "future gamma phi beta pledge",
+                "current future tenants"
+            ],
+            "sentiment": 0.3404255319148936
+        },
+        {
+            "samples": [
+                "every student updates",
+                "volleyball spring quarter",
+                "every degree"
+            ],
+            "sentiment": 0.13306451612903225
+        },
+        {
+            "samples": [
+                "outlook things",
+                "half tram half boat tons fun things",
+                "things concern"
+            ],
+            "sentiment": 0.2867132867132867
+        },
+        {
+            "samples": [
+                "many students ucsb face",
+                "options ucsb difficulty",
+                "big shoutout ucsb housing"
+            ],
+            "sentiment": 0.23270440251572327
+        },
+        {
+            "samples": [
+                "pretty good work life balance",
+                "anywhere want good time",
+                "good parts good people college"
+            ],
+            "sentiment": 1.0
+        },
+        {
+            "samples": [
+                "much university staff member sure info",
+                "staff",
+                "facilities staff"
+            ],
+            "sentiment": 0.20175438596491227
+        },
+        {
+            "samples": [
+                "point enroll zoom university ucsb waste money",
+                "money yin pockets",
+                "something money"
+            ],
+            "sentiment": 0.22702702702702704
+        },
+        {
+            "samples": [
+                "great work ethics",
+                "bad classes",
+                "perfectly logical came work"
+            ],
+            "sentiment": 0.2245508982035928
+        },
+        {
+            "samples": [
+                "shamed moving need",
+                "boat transferred need take classes",
+                "information need"
+            ],
+            "sentiment": 0.21428571428571427
+        },
+        {
+            "samples": [
+                "job people sophomoric undergrads",
+                "millions people",
+                "design messed people bathrooms time"
+            ],
+            "sentiment": 0.2183406113537118
+        },
+        {
+            "samples": [
+                "school work",
+                "mid high school",
+                "obvious fact obvious school business"
+            ],
+            "sentiment": 0.2765957446808511
+        },
+        {
+            "samples": [
+                "new rules laws",
+                "new rental housing"
+            ],
+            "sentiment": 0.16339869281045752
+        }
+    ]
+}
